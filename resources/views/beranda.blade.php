@@ -3,7 +3,7 @@
 @section('home')
 <h1>Beranda</h1>
 
-<button class="bg-sky-600 hover:bg-sky-700 p-3">
+<button class="bg-violet-500 hover:bg-violet-600 focus:ring rounded-2xl p-2 text-slate-100 ">
     Save changes
 </button>
 
