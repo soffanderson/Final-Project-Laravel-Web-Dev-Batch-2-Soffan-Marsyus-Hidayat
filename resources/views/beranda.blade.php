@@ -2,7 +2,11 @@
 
 @section('home')
 <h1>Beranda</h1>
-<p>Hello World!</p>
+
+<button class="bg-sky-600 hover:bg-sky-700 p-3">
+    Save changes
+</button>
+
 <h2>List Product</h2>
 <a class="btn btn-success" href="/product/create">Add New Product</a>
 <hr>
