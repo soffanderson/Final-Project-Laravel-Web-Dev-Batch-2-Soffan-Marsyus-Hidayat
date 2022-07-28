@@ -11,18 +11,17 @@
     <title>Toko Online</title>
 </head>
 
-<body>
-    <div class="container mx-auto">
+<body class="bg-slate-100">
 
-        <div class="container">
-            @yield('home')
-            @yield('content')
-        </div>
-    </div>
+    @yield('home')
+
+    @yield('content')
+
 
 
 
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
 </body>
 
 </html>
