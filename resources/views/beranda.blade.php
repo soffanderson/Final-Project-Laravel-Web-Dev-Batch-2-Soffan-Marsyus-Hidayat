@@ -2,60 +2,6 @@
 
 @section('home')
 
-<nav class="bg-white border-gray-200 px-2 md:px-4 py-2.5 dark:bg-gray-900 sticky top-0 z-40">
-    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-        <a href="https://flowbite.com" class="flex items-center">
-            <img src="{{ asset('css/airtable.svg')  }}" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo">
-            <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Univ. Lambung
-                Mangkurat</span>
-        </a>
-        <div class="flex items-center md:order-2">
-            <a href="#"
-                class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Login</a>
-            <a href="#"
-                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Sign
-                up</a>
-            <button data-collapse-toggle="mega-menu-icons" type="button"
-                class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                aria-controls="mega-menu-icons" aria-expanded="false">
-                <span class="sr-only">Open main menu</span>
-                <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                        d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                        clip-rule="evenodd"></path>
-                </svg>
-            </button>
-        </div>
-        <div id="mega-menu-icons" class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1">
-            <ul class="flex flex-col mt-4 text-sm font-medium md:flex-row md:space-x-8 md:mt-0">
-                <li>
-                    <a href="#"
-                        class="block py-2 pr-4 pl-3 text-blue-600 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-blue-500 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
-                        aria-current="page">Home</a>
-                </li>
-                <li>
-                    <button id="mega-menu-icons-dropdown-button" data-dropdown-toggle="mega-menu-icons-dropdown"
-                        class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-gray-700 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-gray-400 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">
-                        Company
-                        <svg aria-hidden="true" class="ml-1 w-5 h-5 md:w-4 md:h-4" fill="currentColor"
-                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
-
-                </li>
-                <li>
-                    <a href="#"
-                        class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-gray-400 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Team</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
 <div class="container mx-auto">
     {{-- HERO --}}
     <section>
@@ -72,8 +18,8 @@
                                 class="absolute rounded-full bg-fuchsia-300 -bottom-24 right-20 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000">
                             </div>
                             <div class="relative">
-                                <img class="object-cover object-center mx-auto rounded-lg shadow-2xl" alt="hero"
-                                    src="https://wickedblocks.dev/assets/images/placeholders/squareCard.png">
+                                <img class="object-cover object-center mx-auto rounded-lg" alt="hero"
+                                    src="{{ asset('css/hero.png')  }}">
                             </div>
                         </div>
                     </div>
@@ -84,8 +30,8 @@
                     <h1
                         class="mb-8 text-4xl font-bold leading-none tracking-tighter text-neutral-600 md:text-7xl lg:text-5xl">
                         Selamat Datang. Aplikasi Pengelola Data Mahasiswa.</h1>
-                    <p class="mb-8 text-base leading-relaxed text-left text-gray-500">Free and Premium themes, UI Kit's,
-                        templates and landing pages built with Tailwind CSS, HTML &amp; Next.js.</p>
+                    <p class="mb-8 text-base leading-relaxed text-left text-gray-500">Sebuah aplikasi kampus yang
+                        digunakan untuk mengelola data mahasiswa maupun alumni dengan cepat dan akurat.</p>
                     <div class="flex flex-wrap w-full mt-2 -mx-4 text-left">
                         <div class="w-1/4 p-4 mt-4 sm:w-1/4">
                             <svg width="42" height="42" viewBox="0 0 32 32" fill="none"
@@ -161,6 +107,19 @@
 
 
     {{-- TABEL --}}
+    <section id="data">
+        <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-10 lg:py-5">
+            <div class="flex flex-col w-full mb-5 text-center">
+                <h1
+                    class="max-w-5xl text-2xl font-bold leading-none tracking-tighter text-neutral-600 md:text-5xl lg:text-5xl lg:max-w-7xl">
+                    Data Mahasiswa
+                </h1>
+                <p class="max-w-xl mx-auto mt-5 text-base leading-relaxed text-center text-gray-500">Berikut adalah data
+                    mahasiswa di Universitas Lambung Mangkurat.</p>
+            </div>
+        </div>
+    </section>
+
     <div class="overflow-x-auto relative shadow-md sm:rounded-lg w-10/12 mx-auto">
         <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -189,93 +148,46 @@
                 </tr>
             </thead>
             <tbody>
+                {{-- Data Mahasiswa --}}
+                <?php
+                 foreach ($mahasiswas as $mahasiswas) {
+                ?>
                 <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                     <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        Apple MacBook Pro 17"
+                        <?php echo "{$mahasiswas->name}" ?>
                     </th>
                     <td class="py-4 px-6">
-                        Sliver
+
+                        <?php echo "{$mahasiswas->nik}" ?>
+
                     </td>
                     <td class="py-4 px-6">
-                        Laptop
+                        <?php echo "{$mahasiswas->jurusan}" ?>
                     </td>
                     <td class="py-4 px-6">
-                        $2999
+                        <?php echo "{$mahasiswas->fakultas}" ?>
                     </td>
                     <td class="py-4 px-6">
-                        2018
+                        <?php echo "{$mahasiswas->tahun_masuk}" ?>
                     </td>
                     <td class="py-4 px-6">
-                        2019
+                        <?php echo "{$mahasiswas->tahun_lulus}" ?>
                     </td>
                     <td class="py-4 px-6">
-                        <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                        <a href="#"
+                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Edit</a>
+                        <a href="#"
+                            class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Delete</a>
                     </td>
                 </tr>
-                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        Microsoft Surface Pro
-                    </th>
-                    <td class="py-4 px-6">
-                        White
-                    </td>
-                    <td class="py-4 px-6">
-                        Laptop PC
-                    </td>
-                    <td class="py-4 px-6">
-                        2018
-                    </td>
-                    <td class="py-4 px-6">
-                        2018
-                    </td>
-                    <td class="py-4 px-6">
-                        2019
-                    </td>
-                    <td class="py-4 px-6">
-                        <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                    </td>
-                </tr>
-                <tr class="bg-white dark:bg-gray-800">
-                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        Magic Mouse 2
-                    </th>
-                    <td class="py-4 px-6">
-                        Black
-                    </td>
-                    <td class="py-4 px-6">
-                        Accessories
-                    </td>
-                    <td class="py-4 px-6">
-                        $99
-                    </td>
-                    <td class="py-4 px-6">
-                        2018
-                    </td>
-                    <td class="py-4 px-6">
-                        2019
-                    </td>
-                    <td class="py-4 px-6">
-                        <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                    </td>
-                </tr>
+                <?php         
+                }
+                ?>
             </tbody>
         </table>
     </div>
 
 
-    {{-- Data Mahasiswa --}}
-    <?php
-    foreach ($mahasiswas as $mahasiswas) {
-
-        echo "<li>Nama : {$mahasiswas->name} </li>";
-        echo "Price : {$mahasiswas->nik} <br>";
-        echo "Stok : {$mahasiswas->jurusan} <br>";
-        echo "Image : {$mahasiswas->fakultas} <br>";
-        echo "Image : {$mahasiswas->tahun_masuk} <br>";
-        echo "Image : {$mahasiswas->tahun_lulus} <br>";
-    }
-        
-    ?>
 
 
     {{-- list prodeuct --}}
