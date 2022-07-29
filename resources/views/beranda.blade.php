@@ -178,6 +178,12 @@
                         Fakultas
                     </th>
                     <th scope="col" class="py-3 px-6">
+                        Masuk
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Lulus
+                    </th>
+                    <th scope="col" class="py-3 px-6">
                         Action
                     </th>
                 </tr>
@@ -197,6 +203,12 @@
                         $2999
                     </td>
                     <td class="py-4 px-6">
+                        2018
+                    </td>
+                    <td class="py-4 px-6">
+                        2019
+                    </td>
+                    <td class="py-4 px-6">
                         <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                     </td>
                 </tr>
@@ -211,7 +223,13 @@
                         Laptop PC
                     </td>
                     <td class="py-4 px-6">
-                        $1999
+                        2018
+                    </td>
+                    <td class="py-4 px-6">
+                        2018
+                    </td>
+                    <td class="py-4 px-6">
+                        2019
                     </td>
                     <td class="py-4 px-6">
                         <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
@@ -231,6 +249,12 @@
                         $99
                     </td>
                     <td class="py-4 px-6">
+                        2018
+                    </td>
+                    <td class="py-4 px-6">
+                        2019
+                    </td>
+                    <td class="py-4 px-6">
                         <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                     </td>
                 </tr>
@@ -239,17 +263,33 @@
     </div>
 
 
+    {{-- Data Mahasiswa --}}
+    <?php
+    foreach ($mahasiswas as $mahasiswas) {
 
-    <h2>List Product</h2>
+        echo "<li>Nama : {$mahasiswas->name} </li>";
+        echo "Price : {$mahasiswas->nik} <br>";
+        echo "Stok : {$mahasiswas->jurusan} <br>";
+        echo "Image : {$mahasiswas->fakultas} <br>";
+        echo "Image : {$mahasiswas->tahun_masuk} <br>";
+        echo "Image : {$mahasiswas->tahun_lulus} <br>";
+    }
+        
+    ?>
+
+
+    {{-- list prodeuct --}}
+    {{-- <h2>List Product</h2>
     <a class="btn btn-success" href="/product/create">Add New Product</a>
     <hr>
+    //
     <?php
-            foreach($products as $product){
-                echo "<li>Nama : {$product->name} </li>";
-                echo "Price : {$product->price} <br>";
-                echo "Stok : {$product->stock} <br>";
-                echo "Image : {$product->image} <br>";
-                ?>
+    //        foreach($products as $product){
+    //            echo "<li>Nama : {$product->name} </li>";
+    //            echo "Price : {$product->price} <br>";
+    //            echo "Stok : {$product->stock} <br>";
+     //           echo "Image : {$product->image} <br>";
+     //           ?>
     <a href="/product/{{ $product->id }}/edit">Edit</a>
     <form action="product/{{ $product->id }}/delete" method="POST">
         @csrf
@@ -257,8 +297,9 @@
         <button type="submit">Delete</button>
     </form>
 
+    //
     <?php
-        }
-        ?>
+    //    }
+    //    ?> --}}
 </div>
 @endsection
