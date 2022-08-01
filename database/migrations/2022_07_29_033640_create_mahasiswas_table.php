@@ -22,7 +22,6 @@ return new class extends Migration
             $table->integer("tahun_masuk");
             $table->integer("tahun_lulus");
             $table->string("image");
-            
             $table->timestamps();
         });
     }

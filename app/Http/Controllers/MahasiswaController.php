@@ -28,7 +28,6 @@ class MahasiswaController extends Controller
 
     public function deleteData($id) {
         $mahasiswa = Mahasiswa::find($id)->delete();
-
         return redirect('/');
     }
 

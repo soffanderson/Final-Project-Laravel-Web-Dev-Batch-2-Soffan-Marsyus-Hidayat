@@ -12,12 +12,14 @@
             </div>
         </div>
     </section>
-    <form>
+    {{-- Form Input Start --}}
+    <form action="" method="POST">
+        @csrf
         <div class="relative z-0 mb-6 w-full group">
             <div class="mb-6">
                 <label for="base-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Nama
                     Lengkap</label>
-                <input type="text" id="base-input"
+                <input type="text" name="name" id="base-input"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="ex: Soffan M. Hidayat">
             </div>
@@ -26,7 +28,7 @@
             <div class="mb-6">
                 <label for="base-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Nomor
                     Induk Mahasiswa</label>
-                <input type="text" id="base-input"
+                <input type="text" name="nik" id="base-input"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="ex: 117049622345">
             </div>
@@ -35,14 +37,14 @@
             <div class="relative z-0 mb-6 w-full group">
                 <label for="base-input"
                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Jurusan</label>
-                <input type="text" id="base-input"
+                <input type="text" name="jurusan" id="base-input"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="ex: Teknik Informatika">
             </div>
             <div class="relative z-0 mb-6 w-full group">
                 <label for="base-input"
                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Fakultas</label>
-                <input type="text" id="base-input"
+                <input type="text" name="fakultas" id="base-input"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="ex: FKIP">
             </div>
@@ -51,47 +53,24 @@
             <div class="relative z-0 mb-6 w-full group">
                 <label for="base-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Tahun
                     Masuk</label>
-                <input type="text" id="base-input"
+                <input type="text" name="tahun_masuk" id="base-input"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="ex: 2014">
             </div>
             <div class="relative z-0 mb-6 w-full group">
                 <label for="base-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Tahun
                     Lulus</label>
-                <input type="text" id="base-input"
+                <input type="text" name="tahun_lulus" id="base-input"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="ex: 2018">
             </div>
         </div>
         <div class="flex gap-2 flex-row-reverse">
-            <button type="submit"
-                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 ">Submit</button>
+            <input type="submit"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 cursor-pointer"
+                value="Submit">
             <a href="/" type="submit"
                 class="text-black bg-slate-100 hover:bg-slate-200 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 ">Cancel</a>
         </div>
     </form>
-
-
-
-
-    <a href="/">
-        << Back</a>
-            <form action="" method="POST">
-                @csrf
-                <h2>Create New Product</h2><br>
-                <input type="text" name="name" placeholder="Product Name"><br>
-                <input type="text" name="nik" placeholder="NIK">
-                <br>
-                <input type="text" name="jurusan" placeholder="Jurusan">
-                <br>
-                <input type="text" name="fakultas" placeholder="Fakultas">
-                <br>
-                <input type="number" name="tahun_masuk" placeholder="Tahun Masuk">
-                <br><input type="number" name="tahun_lulus" placeholder="Tahun Lulus">
-                <br>
-                <input type="file" name="image" placeholder="image">
-                <br>
-                <input type="submit" value="Add Mahasiswa">
-            </form>
-</div>
-@endsection
+    @endsection

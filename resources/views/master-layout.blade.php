@@ -80,7 +80,7 @@
 
 
     <script src="{{ asset('js/app.js') }}"></script>
-    <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
+    <script src="{{ asset('js/flowbite.js')  }}"></script>
 </body>
 
 </html>
