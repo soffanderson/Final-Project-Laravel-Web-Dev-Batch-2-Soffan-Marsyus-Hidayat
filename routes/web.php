@@ -16,12 +16,12 @@ Route::get('/product/{id}/edit', [App\Http\Controllers\ProductController::class,
 
 // Route Mahasiswa
 
-Route::prefix('admin')->group(function () {
-    Route::get('/mahasiswa/create', [App\Http\Controllers\MahasiswaController::class, 'formCreate']);
-    Route::post('/mahasiswa/create', [App\Http\Controllers\MahasiswaController::class, 'saveData']);
+// Route::prefix('admin')->group(function () {
+// });
 
-    Route::get('/mahasiswa/{id}/edit', [App\Http\Controllers\MahasiswaController::class, 'formEdit']); 
-    Route::post('/mahasiswa/{id}/edit', [App\Http\Controllers\MahasiswaController::class, 'editData']);
-    Route::delete('/mahasiswa/{id}/delete', [App\Http\Controllers\MahasiswaController::class, 'deleteData']); 
-});
-    
+Route::get('/mahasiswa/create', [App\Http\Controllers\MahasiswaController::class, 'formCreate']);
+Route::post('/mahasiswa/create', [App\Http\Controllers\MahasiswaController::class, 'saveData']);
+
+Route::get('/mahasiswa/{id}/edit', [App\Http\Controllers\MahasiswaController::class, 'formEdit']); 
+Route::post('/mahasiswa/{id}/edit', [App\Http\Controllers\MahasiswaController::class, 'editData']);
+Route::delete('/mahasiswa/{id}/delete', [App\Http\Controllers\MahasiswaController::class, 'deleteData']); 
