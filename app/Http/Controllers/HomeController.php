@@ -9,11 +9,17 @@ use App\Models\Product;
 
 class HomeController extends Controller
 {
+    public function index()
+    {
+        $mahasiswas = Mahasiswa::get();
+        return view('beranda', compact("mahasiswas"));
+    }
+
     public function homePage()
     {
         // data mahasiswa
         $mahasiswas = Mahasiswa::get();
-        return view('beranda', compact("mahasiswas"));
+        return view('admin.beranda', compact("mahasiswas"));
         var_dump($mahasiswas);
 
         // $dataUsers = ["Soffan", "Marsyus", "Hidayat"];

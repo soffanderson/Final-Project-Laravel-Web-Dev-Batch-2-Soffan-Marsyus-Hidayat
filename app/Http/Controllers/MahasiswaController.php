@@ -9,7 +9,7 @@ class MahasiswaController extends Controller
 {
     public function formCreate()   
     {
-        return view('form-create');
+        return view('admin.form-create');
     }
 
     public function saveData(Request $request) {
@@ -23,17 +23,17 @@ class MahasiswaController extends Controller
         $mahasiswa->image = $request->image;
         $mahasiswa->save();
 
-        return redirect('/');
+        return redirect('/admin');
     }
 
     public function deleteData($id) {
         $mahasiswa = Mahasiswa::find($id)->delete();
-        return redirect('/');
+        return redirect('/admin');
     }
 
     public function formEdit($id) {
         $mahasiswa = Mahasiswa::find($id);
-        return view('form-edit', compact('mahasiswa'));
+        return view('admin.form-edit', compact('mahasiswa'));
     }
     public function editData(Request $request, $id) {
         $mahasiswa = Mahasiswa::find($id);
@@ -46,6 +46,6 @@ class MahasiswaController extends Controller
         $mahasiswa->image = $request->image;
         $mahasiswa->save();
 
-        return redirect('/');
+        return redirect('/admin');
     }
 }
