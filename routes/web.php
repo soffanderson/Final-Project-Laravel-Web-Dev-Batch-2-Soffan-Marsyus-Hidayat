@@ -23,6 +23,8 @@ Route::prefix('admin')->group(function () {
     Route::get('/mahasiswa/{id}/edit', [App\Http\Controllers\MahasiswaController::class, 'formEdit']); 
     Route::post('/mahasiswa/{id}/edit', [App\Http\Controllers\MahasiswaController::class, 'editData']);
     Route::delete('/mahasiswa/{id}/delete', [App\Http\Controllers\MahasiswaController::class, 'deleteData']); 
+    Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
 });
 
 Auth::routes();
