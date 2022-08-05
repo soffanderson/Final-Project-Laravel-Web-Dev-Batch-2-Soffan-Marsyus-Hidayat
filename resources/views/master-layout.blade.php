@@ -67,7 +67,7 @@
 
 
     <footer class="bg-white" aria-labelledby="footer-heading" id="footer">
-        <div class="px-4 py-7 mx-auto bg-gray-50 max-w-7xl sm:px-6 lg:px-16 mt-5">
+        <div class="px-4 py-7 mx-auto max-w-7xl sm:px-6 lg:px-16 mt-5">
             <div class="flex flex-wrap items-baseline lg:justify-center">
                 <span class="mt-2 text-sm font-light text-gray-500">
                     Copyright © 2020 - 2021

@@ -1,4 +1,4 @@
-@extends('master-layout')
+@extends('admin.admin-layout')
 
 @section('content')
 <div class="container mx-auto w-2/5">

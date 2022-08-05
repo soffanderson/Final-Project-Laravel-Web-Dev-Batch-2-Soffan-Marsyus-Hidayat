@@ -30,3 +30,4 @@ Route::prefix('admin')->group(function () {
 Auth::routes();
 
 Route::get('/admin', [App\Http\Controllers\HomeController::class, 'homePage']);
+
