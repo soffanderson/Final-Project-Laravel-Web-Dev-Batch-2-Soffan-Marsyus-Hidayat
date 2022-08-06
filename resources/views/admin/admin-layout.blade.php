@@ -152,7 +152,7 @@
 
 
 
-    <footer class="bg-white" aria-labelledby="footer-heading" id="footer">
+    <footer class="bg-white mt-5" aria-labelledby="footer-heading" id="footer">
         <div class="p-7 mx-auto max-w-7xl sm:px-6 lg:px-16">
             <div class="flex flex-wrap items-baseline lg:justify-center">
                 <span class="mt-2 text-sm font-light text-gray-500">
